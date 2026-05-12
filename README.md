@@ -106,6 +106,11 @@ ArduPilotドローンのシミュレーションを簡単に試すには、[Miss
 |disarm()|	機体をディスアームします|
 |takeoff(altitude=10.0)|	指定高度まで離陸します|
 |change_mode(mode="GUIDED")|	モードを変更します|
+|get_position()|	現在位置を取得します|
+|clear_mission()|	機体上のミッションを消去します|
+|download_mission()|	機体上のミッションを取得します|
+|upload_star_mission(altitude=15.0, outer_radius=50.0, inner_radius=20.0, points=5)|	現在位置を中心に星形ミッションを作成してアップロードします|
+|start_mission()|	AUTOモードに変更してミッション開始状態にします|
 
 ## プロンプト例（チャットでの操作）
 
@@ -114,6 +119,7 @@ Cline、または Claude Desktop に話しかけて、ArduPilot を自然言語�
 - 「ArduPilotをアームして」
 - 「10メートルまで離陸して」
 - 「モードをGUIDEDに変更して」
+- 「高度15m、半径50mの星形ミッションを作って機体にアップロードして」
 - 「ArduPilotをディスアームして」
 
 ※ MCP サーバーに登録されているツールに応じて、自然文が自動で変換されます。

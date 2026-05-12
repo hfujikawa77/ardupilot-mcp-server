@@ -36,6 +36,12 @@ MANIFEST
 pip-log.txt
 pip-delete-this-directory.txt
 
+# ArduPilot / MAVLink logs
+mav.*
+*.bin
+*.BIN
+*.log.raw
+
 # Unit test / coverage reports
 htmlcov/
 .tox/
