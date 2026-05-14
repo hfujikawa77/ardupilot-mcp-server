@@ -20,10 +20,11 @@ ARMABLE_MODES = {
 }
 
 MISSION_TYPE = getattr(mavutil.mavlink, "MAV_MISSION_TYPE_MISSION", 0)
+GUIDED_MODE = "GUIDED"
 
 # ArduPilot接続（ローカルMAVProxy UDPリレー）
 def connect_to_ardupilot():
-    mavlink_endpoint = "127.0.0.1:14550"
+    mavlink_endpoint = "tcp:127.0.0.1:5762"
     try:
         print(f"ArduPilotに接続中... ({mavlink_endpoint})")
         conn = mavutil.mavlink_connection(
